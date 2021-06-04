@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      data_compra: {
+      data_foto: {
         type: DataTypes.DATE,
         allowNull: false,
       },

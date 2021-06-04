@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const { Utilizadores } = require("../models");
+const { utilizadores } = require("../models");
 
 router.get("/", async (req, res) => {
-  const listadeUtilizadores = await Utilizadores.findAll();
-  res.json(listadeUtilizadores);
+  const allutilizadores = await utilizadores.findAll();
+  res.json(allutilizadores);
 });
 
 router.post("/", async (req, res) => {
-  const user = req.body;
-  await Utilizadores.create(user);
-  res.json(user);
+  const utilizador = req.body;
+  await utilizadores.create(utilizador);
+  res.json(utilizador);
 });
 
 module.exports = router;

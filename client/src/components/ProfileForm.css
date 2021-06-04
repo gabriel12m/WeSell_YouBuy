@@ -1,0 +1,22 @@
+.oneProfile {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 600px;
+}
+
+.headers {
+  background-color: gray;
+  color: blanchedalmond;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.info {
+  text-align: left;
+  width: 300px;
+  border: 1px solid black;
+}

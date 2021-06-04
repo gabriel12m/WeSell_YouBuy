@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  var Utilizadores = sequelize.define(
+  const Utilizadores = sequelize.define(
     "utilizadores",
     {
       idUtilizador: {
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       datanascimento: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       sexo: {
