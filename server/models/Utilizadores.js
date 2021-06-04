@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Utilizadores = sequelize.define(
-    "Utilizadores",
+  var Utilizadores = sequelize.define(
+    "utilizadores",
     {
       idUtilizador: {
         type: DataTypes.INTEGER,
@@ -43,6 +43,17 @@ module.exports = (sequelize, DataTypes) => {
     },
     { timestamps: false } // Desabilita o Create_At e o Update_At
   );
+
+  Utilizadores.associate = function (models) {
+    models.produtos.hasMany(models.compras, {
+      foreignKey: "idUtilizador",
+    });
+    models.utilizadores.belongsToMany(models.produtos, {
+      through: "analises",
+      foreignKey: "idUtilizador",
+      primaryKey: true,
+    });
+  };
 
   return Utilizadores;
 };
