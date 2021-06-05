@@ -9,6 +9,7 @@ import MyProfile from "../pages/profile/my_profile/MyProfile";
 import EditProfile from "../pages/profile/edit_profile/EditProfile";
 import ShopHistory from "../pages/profile/shop_history/ShopHistory";
 import ShoppingCart from "../pages/shopping_cart/ShoppingCart";
+import "./App.css";
 
 function App() {
   return (
