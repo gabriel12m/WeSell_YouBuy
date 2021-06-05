@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ProfileForm from "../../components/ProfileForm";
-import "./Profile.css";
+import "./MyProfile.css";
+import ProfileForm from "../../../components/profileform/ProfileForm";
 
-export default class Profile extends Component {
+export default class EditProfile extends Component {
   render() {
     return (
       <div className="ProfilePage">
