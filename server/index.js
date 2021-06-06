@@ -9,19 +9,18 @@ const db = require("./models");
 
 //Routers
 const utilizadoresRouter = require("./routes/Utilizadores");
-const comprasRouter = require("./routes/Compras");
-const categoriasRouter = require("./routes/Categorias");
-const analisesRouter = require("./routes/Analises");
-const nseriesRouter = require("./routes/N_Serie");
-const fotografiasRouter = require("./routes/Fotografias");
-const produtosRouter = require("./routes/Produtos");
-
 app.use("/utilizadores", utilizadoresRouter);
+const comprasRouter = require("./routes/Compras");
 app.use("/compras", comprasRouter);
+const categoriasRouter = require("./routes/Categorias");
 app.use("/categorias", categoriasRouter);
+const analisesRouter = require("./routes/Analises");
 app.use("/analises", analisesRouter);
+const nseriesRouter = require("./routes/N_Serie");
 app.use("/nseries", nseriesRouter);
+const fotografiasRouter = require("./routes/Fotografias");
 app.use("/fotografias", fotografiasRouter);
+const produtosRouter = require("./routes/Produtos");
 app.use("/produtos", produtosRouter);
 
 db.sequelize.sync().then(() => {

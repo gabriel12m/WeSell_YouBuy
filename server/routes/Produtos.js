@@ -2,14 +2,9 @@ const express = require("express");
 const router = express.Router();
 const { produtos } = require("../models");
 
-router.get("/", async (req, res) => {
-  const allprodutos = await produtos.findAll();
-  res.json(allprodutos);
-});
-
-router.post("/", async (req, res) => {
-  const produto = req.body;
-  await produtos.create(produto);
+router.get("/:idProduto", async (req, res) => {
+  const idProduto = req.params.idProduto;
+  const produto = await produtos.findAll({ where: { idProduto: idProduto } });
   res.json(produto);
 });
 

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import "./EditProfile.css";
 
-export default class EditProfile extends Component {
-  render() {
-    return (
-      <div className="EditProfilePage">
-        <h1>Hi, I'm Edit Profile Page!</h1>
-      </div>
-    );
-  }
+function EditProfile() {
+  return (
+    <div className="EditProfilePage">
+      <h1>Hi, I'm Edit Profile Page!</h1>
+    </div>
+  );
 }
+
+export default EditProfile;
