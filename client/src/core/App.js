@@ -15,16 +15,18 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/products" exact component={Products} />
-        <Route path="/categories" exact component={Categories} />
-        <Route path="/about" exact component={About} />
-        <Route path="/profile" exact component={MyProfile} />
-        <Route path="/edit_profile" exact component={EditProfile} />
-        <Route path="/shop_history" exact component={ShopHistory} />
-        <Route path="/shopping_cart" exact component={ShoppingCart} />
-      </Switch>
+      <div className="page">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/products" exact component={Products} />
+          <Route path="/categories" exact component={Categories} />
+          <Route path="/about" exact component={About} />
+          <Route path="/profile" exact component={MyProfile} />
+          <Route path="/edit_profile" exact component={EditProfile} />
+          <Route path="/shop_history" exact component={ShopHistory} />
+          <Route path="/shopping_cart" exact component={ShoppingCart} />
+        </Switch>
+      </div>
     </Router>
   );
 }

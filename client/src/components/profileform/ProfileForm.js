@@ -16,6 +16,10 @@ function ProfileForm() {
         return (
           <div className="oneProfile">
             <table>
+              <tr className="id">
+                <td className="headers">ID do Utilizador</td>
+                <td className="info">{value.idUtilizador}</td>
+              </tr>
               <tr className="nome">
                 <td className="headers">Nome</td>
                 <td className="info">{value.nome}</td>

@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       descricao: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
       },
       data_foto: {
@@ -29,8 +29,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Fotografias.associate = function (models) {
-    models.fotografias.hasMany(models.produtos, {
-      foreignKey: "idFotografia",
+    models.produtos.hasMany(models.fotografias, {
+      foreignKey: "idProduto",
     });
   };
 

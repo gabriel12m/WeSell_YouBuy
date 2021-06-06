@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       detalhes: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
       stock: {
@@ -36,8 +36,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Produtos.associate = function (models) {
-    models.produtos.belongsTo(models.fotografias, {
-      foreignKey: "idFotografia",
+    models.fotografias.belongsTo(models.produtos, {
+      foreignKey: "idProduto",
     });
     models.produtos.belongsTo(models.categorias, {
       foreignKey: "idCategoria",
