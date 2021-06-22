@@ -8,4 +8,9 @@ router.get("/:idProduto", async (req, res) => {
   res.json(produto);
 });
 
+router.get("/", async (req, res) => {
+  const allprodutos = await produtos.findAll();
+  res.json(allprodutos);
+});
+
 module.exports = router;

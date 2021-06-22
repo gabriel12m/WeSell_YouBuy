@@ -18,8 +18,6 @@ const analisesRouter = require("./routes/Analises");
 app.use("/analises", analisesRouter);
 const nseriesRouter = require("./routes/N_Serie");
 app.use("/nseries", nseriesRouter);
-const fotografiasRouter = require("./routes/Fotografias");
-app.use("/fotografias", fotografiasRouter);
 const produtosRouter = require("./routes/Produtos");
 app.use("/produtos", produtosRouter);
 

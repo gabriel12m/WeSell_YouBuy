@@ -1,5 +1,4 @@
 const Categorias = require("./Categorias");
-const fotografias = require("./fotografias");
 
 module.exports = (sequelize, DataTypes) => {
   var Produtos = sequelize.define(
@@ -19,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
       },
+      foto: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       detalhes: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -36,9 +39,6 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Produtos.associate = function (models) {
-    models.fotografias.belongsTo(models.produtos, {
-      foreignKey: "idProduto",
-    });
     models.produtos.belongsTo(models.categorias, {
       foreignKey: "idCategoria",
     });
